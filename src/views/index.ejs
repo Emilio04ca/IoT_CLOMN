@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Pagini Principal</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">CLOMN</a>
+    </nav>
+    <div class="container">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/add" method="POST">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <form class="d-flex">
+                                  <input class="form-control me-2" type="text" name="porcentaje" placeholder="Porcentaje" aria-label="Search">
+                                  <input class="form-control me-2" type="text" name="presencia" placeholder="Presencia" aria-label="Search">
+                                  <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                          </nav>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <table class="table table-bordered tabla-hover table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Porcentaje</th>
+                        <th>Presencia</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i < tablas.length; i++){  %>
+                        <tr>
+                            <td><%= i+1  %></td>
+                            <td><%= tablas[i].porcentaje  %></td>
+                            <td><%= tablas[i].presencia  %></td>
+                            <td><%= tablas[i].fecha  %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
