@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Registros</title>
+</head>
+<style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:200px; 
+  height:200px;
+}
+</style>
+<body style="background-color: rgb(78, 78, 78);">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"><img src="https://i.ibb.co/C8NdwMW/logot.jpg" width="50" height="50"> CLOMN</a>
+    </nav>
+    <p style="margin-left: 2em;"></p>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-8">
+                <table class="table table-bordered tabla-hover table-dark table table-striped" >
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>ID</th>
+                            <th>Porcentaje</th>
+                            <th>Presencia</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <% for(var i = 0; i < tablas.length; i++){  %>
+                        <tr>
+                            <td><%= i+1  %></td>
+                            <td><%= tablas[i].ID  %></td>
+                            <td><%= tablas[i].porcentaje  %></td>
+                            <td><%= tablas[i].presencia  %></td>
+                            <td><%= tablas[i].Fecha  %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div style="align-content: center;" class="input-group mb-3" >
+                    <img  src="https://i.ibb.co/vdM59j8/LOGOTIPO.jpg" class="center" width="100" height="100" style="align-content: center;">
+                </div>
+                <div class="p-4 mb-3 bg-light rounded">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="/add" method="POST">
+                                <div class="input-group mb-3">
+                                    <input class="form-control me-2" type="text" name="ID" placeholder="Numero de Modulo">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input class="form-control me-2" type="int" name="porcentaje" placeholder="Porcentaje" >
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input class="form-control me-2" type="int" name="presencia" placeholder="Presencia">
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-lg btn-block;"   type="submit">Registrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

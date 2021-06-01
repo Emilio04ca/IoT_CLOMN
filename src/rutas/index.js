@@ -1,13 +1,13 @@
 const express = require ('express');
 const router = express.Router();
-const modelo = require ('../model/datos')();
+const modelo = require ('../model/Esquema_Tabla')();
 
-const Valor = require('../model/datos');
+const Valor = require('../model/Esquema_Tabla');
 
 router.get('/', async (req, res) => {
     const tablas = await Valor.find();
     console.log(tablas);
-    res.render('index.ejs',{
+    res.render('Registros.ejs',{
         tablas
     });
 });
