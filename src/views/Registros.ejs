@@ -17,7 +17,7 @@
 }
 </style>
 <body style="background-color: rgb(78, 78, 78);">
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark" >
         <a class="navbar-brand" href="/"><img src="https://i.ibb.co/C8NdwMW/logot.jpg" width="50" height="50"> CLOMN</a>
     </nav>
     <p style="margin-left: 2em;"></p>
@@ -27,8 +27,7 @@
                 <table class="table table-bordered tabla-hover table-dark table table-striped" >
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>ID</th>
+                            <th>Id_Modulo</th>
                             <th>Porcentaje</th>
                             <th>Presencia</th>
                             <th>Fecha</th>
@@ -37,10 +36,9 @@
                 <tbody>
                     <% for(var i = 0; i < tablas.length; i++){  %>
                         <tr>
-                            <td><%= i+1  %></td>
-                            <td><%= tablas[i].ID  %></td>
-                            <td><%= tablas[i].porcentaje  %></td>
-                            <td><%= tablas[i].presencia  %></td>
+                            <td><%= tablas[i].Id_Modulo %></td>
+                            <td><%= tablas[i].Porcentaje +" %"  %></td>
+                            <td><%= tablas[i].Presencia  %></td>
                             <td><%= tablas[i].Fecha  %></td>
                         </tr>
                     <% } %>
@@ -55,15 +53,15 @@
                 <div class="p-4 mb-3 bg-light rounded">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/add" method="POST">
+                            <form action="/add" method="POST" autocomplete="off">
                                 <div class="input-group mb-3">
-                                    <input class="form-control me-2" type="text" name="ID" placeholder="Numero de Modulo">
+                                    <input class="form-control me-2" type="int" name="Id_Modulo" placeholder="Id Modulo">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input class="form-control me-2" type="int" name="porcentaje" placeholder="Porcentaje" >
+                                    <input class="form-control me-2" type="int" name="Porcentaje" placeholder="Porcentaje" >
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input class="form-control me-2" type="int" name="presencia" placeholder="Presencia">
+                                    <input class="form-control me-2" type="int" name="Presencia" placeholder="Presencia">
                                 </div>
                                 <div>
                                     <button class="btn btn-primary btn-lg btn-block;"   type="submit">Registrar</button>
