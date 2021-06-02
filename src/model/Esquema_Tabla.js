@@ -7,7 +7,7 @@ const Registros = new esquema({
     Presencia: Number ,
     Fecha: {
         type: Date, 
-        default: Date.now
+        default: Date.now 
     }
 
 });

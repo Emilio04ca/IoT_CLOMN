@@ -27,4 +27,4 @@ app.use(bodyParse.urlencoded({extended:false}));
 
 app.use('/', indexRoutas);
 
-app.listen(app.get('port'), () =>{console.log('servidor funcionando', app.get('port'))});
+app.listen(app.get('port'), () =>{console.log('servidor funcionando en', app.get('port'))});
