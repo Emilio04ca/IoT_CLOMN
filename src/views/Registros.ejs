@@ -34,14 +34,12 @@
                         </tr>
                     </thead>
                 <tbody>
-                    <% for(var i = 0; i < tablas.length; i++){  %>
                         <tr>
-                            <td><%= tablas[i].Id_Modulo %></td>
-                            <td><%= tablas[i].Porcentaje +" %"  %></td>
-                            <td><%= tablas[i].Presencia  %></td>
-                            <td><%= tablas[i].Fecha %></td>
+                            <td><%= tabla.Id_Modulo %></td>
+                            <td><%= tabla.Porcentaje +" %"  %></td>
+                            <td><%= tabla.Presencia  %></td>
+                            <td><%= tabla.Fecha %></td>
                         </tr>
-                    <% } %>
                 </tbody>
             </table>
         </div>
@@ -74,5 +72,10 @@
         </div>
     </div>
 </div>
+<div class="col-6 col-md-3 text-center">
+    <div style="display:inline;width:90px;height:90px;"><canvas width="90" height="90"></canvas><input type="text" class="knob" value="40" data-width="90" data-height="90" data-fgcolor="#00c0ef" style="width: 49px; height: 30px; position: absolute; vertical-align: middle; margin-top: 30px; margin-left: -69px; border: 0px; background: none; font: bold 18px Arial; text-align: center; color: rgb(0, 192, 239); padding: 0px; appearance: none;"></div>
+
+    <div class="knob-label">Disk Space</div>
+  </div>
 </body>
 </html>
