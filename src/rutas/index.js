@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     const tablas = await Valor_Squema.find();
     //console.log(tablas);
    //res.json(tablas);
-     res.render('Registros copy.ejs',{
+     res.render('Registros copy 2.ejs',{
         tablas
     });
 });
@@ -15,7 +15,7 @@ router.post('/add', async (req, res) => {
     const tabla = new Valor_Squema(req.body);
     await tabla.save();
     //res.json(tabla)
-   // res.redirect('/');
+    res.render('Registros copy 2.ejs', {tabla});
    
 });
 
