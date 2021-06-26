@@ -6,7 +6,6 @@ const Valor_Squema = require('../model/Esquema_Tabla');
 router.get('/', async (req, res) => {
     const tablas = await Valor_Squema.find();
     //console.log(tablas);
-   //res.json(tablas);
      res.render('Registros copy 2.ejs',{
         tablas
     });
