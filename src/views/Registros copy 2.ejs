@@ -11,14 +11,14 @@
     <script type="text/javascript">
         function actualizar(){location.reload(true);}
       //Función para actualizar cada 8 segundos(8000 milisegundos)
-        setInterval("actualizar()",8000);
+        setInterval("actualizar()",6000);
       </script>
     <!-- amCharts javascript sources -->
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/gauge.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
     
-    <% var contador =0;
+    <% 
         for(var i=0; i < tablas.length; i++)
         {
             var porcentaje= tablas[i].Porcentaje;
@@ -123,9 +123,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><%= Id_Modulo %></td>
-                            <td><%= presencia  %></td>
-                            <td><%= fecha  %></td>
+                            <td ><h3><%= Id_Modulo %></h3></td>
+                            <td><h3><%= presencia  %></h3></td>
+                            <td><h3><%= fecha  %></h3></td>
                         </tr>
                     </tbody>
                 </table>
